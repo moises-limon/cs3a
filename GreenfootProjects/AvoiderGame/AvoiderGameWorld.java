@@ -30,11 +30,11 @@ public class AvoiderGameWorld extends World
     private void setAvatar()
     {
         Avatar a = new Avatar();
-        addObject(a,((getWidth()/2)), (getHeight()/2)+ 50);
+        addObject(a,((getWidth()/2)), (getHeight()/2)+ 100);
     }
 
     public void act() {
-        if(Greenfoot.getRandomNumber(1000) < 11) {
+        if(Greenfoot.getRandomNumber(500) < 10) {
             Enemy e = new Enemy();
             addObject(e, Greenfoot.getRandomNumber(getWidth() - 20) + 10, -30);
         }
