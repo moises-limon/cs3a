@@ -14,7 +14,7 @@ public class Title extends Actor
      */
 
     public void act() {
-            checkRemove();
+        checkRemove();
     }
 
     private void checkRemove() {
@@ -22,7 +22,10 @@ public class Title extends Actor
         w.removeObject(this);
         play();
     }
+    
     public void play(){
-        Greenfoot.playSound("PokemonTheme.wav");
-    }
+        GreenfootSound sound = new GreenfootSound("PokemonTheme.wav");
+        sound.play();
+   
+}
 }

@@ -12,8 +12,8 @@ public class Avatar extends Actor
     {
         followMouse();
         checkForCollisions();
-    }    
-
+    } 
+    
     private void followMouse() {
         MouseInfo mi = Greenfoot.getMouseInfo();
         if (mi != null) {
@@ -21,7 +21,7 @@ public class Avatar extends Actor
         }
     }
 
-    private void checkForCollisions(){
+    public void checkForCollisions(){
         Actor Enemy= getOneIntersectingObject(Enemy.class);
         if(Enemy != null){
            AvoiderGameWorld world =(AvoiderGameWorld) getWorld();

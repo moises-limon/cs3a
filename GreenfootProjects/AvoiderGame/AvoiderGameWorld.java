@@ -19,9 +19,9 @@ public class AvoiderGameWorld extends World
         super(900, 615, 1, false); 
         setAvatar();
         setTitle();   
-        
+
     }
-   
+
     private void setTitle()
     {
         Title t = new Title();
@@ -34,13 +34,13 @@ public class AvoiderGameWorld extends World
         addObject(a,((getWidth()/2)), (getHeight()/2)+ 100);
     }
 
-    public void act() {
+       public void act() {
         if(Greenfoot.getRandomNumber(500) < 10) {
             Enemy e = new Enemy();
             addObject(e, Greenfoot.getRandomNumber(getWidth() - 20) + 10, -30);
         }
     }
-    
+
     public void endGame() {
         AvoiderWorldGameOverScreen go = new AvoiderWorldGameOverScreen();
         Greenfoot.setWorld(go);
