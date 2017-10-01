@@ -20,13 +20,12 @@ public class Avatar extends Actor
             setLocation(mi.getX(),mi.getY());
         }
     }
-    
+
     private void checkForCollisions(){
         Actor Enemy= getOneIntersectingObject(Enemy.class);
         if(Enemy != null){
            AvoiderGameWorld world =(AvoiderGameWorld) getWorld();
-           world.endGame();  
+           world.endGame();
         }
     }
-    
 }

@@ -20,5 +20,9 @@ public class Title extends Actor
     private void checkRemove() {
         World w = getWorld();
         w.removeObject(this);
+        play();
+    }
+    public void play(){
+        Greenfoot.playSound("PokemonTheme.wav");
     }
 }
