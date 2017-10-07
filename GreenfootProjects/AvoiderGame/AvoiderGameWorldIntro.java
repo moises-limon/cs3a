@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class AvoiderGameWorldIntro extends World
 {
+    GreenfootSound sound;
 
     /**
      * Constructor for objects of class AvoiderGameWorldIntro.
@@ -17,13 +18,26 @@ public class AvoiderGameWorldIntro extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(900, 615, 1); 
+        play();
     }
-    
-     public void act()
+
+    public void act()
     {
         if(Greenfoot.mouseClicked(this)){
+            stop();
             AvoiderGameWorld world = new AvoiderGameWorld();
             Greenfoot.setWorld(world);
         }
     }
+
+    public void play(){
+        sound = new GreenfootSound("PokemonIntro.mp3");
+        sound.play();
+        sound.playLoop();
+    } 
+
+    public void stop(){
+        sound.stop();
+    }
+
 }

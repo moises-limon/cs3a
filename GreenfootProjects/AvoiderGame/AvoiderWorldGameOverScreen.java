@@ -8,7 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class AvoiderWorldGameOverScreen extends World
 {
-
+    GreenfootSound sound;
+    
     /**
      * Constructor for objects of class AvoiderWorldGameOverScreen.
      * 
@@ -17,7 +18,7 @@ public class AvoiderWorldGameOverScreen extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(900, 615, 1); 
-        
+        play();
     }
 
     public void act()
@@ -27,4 +28,13 @@ public class AvoiderWorldGameOverScreen extends World
             Greenfoot.setWorld(world);
                     }
     }
+     public void play(){
+        sound = new GreenfootSound("GameOver.mp3");
+        sound.play();
+
+    } 
+    public void stop(){
+        sound.stop();
+    }
+
 }
