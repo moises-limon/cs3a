@@ -8,7 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class AvoiderGameWorld extends World
 {
-
+    GreenfootSound sound;
+    
     /**
      * Constructor for objects of class AvoiderGameWorld.
      * 
@@ -25,16 +26,21 @@ public class AvoiderGameWorld extends World
     private void setAvatar()
     {
         Avatar a = new Avatar();
-        addObject(a,((getWidth()/2)), (getHeight()/2)+ 100);
+        addObject(a,((getWidth()/2)), (getHeight()/2)+ 200);
     }
-    
-        public void play(){
-        GreenfootSound sound = new GreenfootSound("PokemonTheme.wav");
+
+    public void play(){
+        sound = new GreenfootSound("PokemonBattleMusic.mp3");
         sound.play();
-   
+        sound.playLoop();
+
     } 
     
-       public void act() {
+    public void stop(){
+        sound.stop();
+    }
+
+    public void act() {
         if(Greenfoot.getRandomNumber(500) < 10) {
             Enemy e = new Enemy();
             addObject(e, Greenfoot.getRandomNumber(getWidth() - 20) + 10, -30);
@@ -42,6 +48,7 @@ public class AvoiderGameWorld extends World
     }
 
     public void endGame() {
+        stop();
         AvoiderWorldGameOverScreen go = new AvoiderWorldGameOverScreen();
         Greenfoot.setWorld(go);
     }
