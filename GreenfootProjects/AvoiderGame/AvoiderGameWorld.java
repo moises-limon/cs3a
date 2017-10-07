@@ -18,14 +18,8 @@ public class AvoiderGameWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(900, 615, 1, false); 
         setAvatar();
-        setTitle();   
+        play();
 
-    }
-
-    private void setTitle()
-    {
-        Title t = new Title();
-        addObject(t,((getWidth()/2)), (getHeight()/2)- 200);
     }
 
     private void setAvatar()
@@ -33,7 +27,13 @@ public class AvoiderGameWorld extends World
         Avatar a = new Avatar();
         addObject(a,((getWidth()/2)), (getHeight()/2)+ 100);
     }
-
+    
+        public void play(){
+        GreenfootSound sound = new GreenfootSound("PokemonTheme.wav");
+        sound.play();
+   
+    } 
+    
        public void act() {
         if(Greenfoot.getRandomNumber(500) < 10) {
             Enemy e = new Enemy();
