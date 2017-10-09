@@ -43,7 +43,7 @@ public class AvoiderGameWorld extends World
     public void act() {
         if(Greenfoot.getRandomNumber(500) < 10) {
             Enemy e = new Enemy();
-            addObject(e, Greenfoot.getRandomNumber(getWidth() - 20) + 10, -30);
+            addObject(e, Greenfoot.getRandomNumber(getWidth() - 20) + 10, -20);
         }
     }
 
