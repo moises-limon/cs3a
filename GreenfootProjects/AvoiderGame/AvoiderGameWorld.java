@@ -28,7 +28,8 @@ public class AvoiderGameWorld extends World
         Avatar a = new Avatar();
         addObject(a,((getWidth()/2)), (getHeight()/2)+ 200);
     }
-
+    
+    
     public void play(){
         sound = new GreenfootSound("PokemonBattleMusic.mp3");
         sound.play();
