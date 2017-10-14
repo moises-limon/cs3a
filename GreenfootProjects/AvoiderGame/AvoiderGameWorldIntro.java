@@ -32,6 +32,7 @@ public class AvoiderGameWorldIntro extends World
 
     public void play(){
         sound = new GreenfootSound("PokemonIntro.mp3");
+        sound.setVolume(50);
         sound.play();
         sound.playLoop();
     } 
