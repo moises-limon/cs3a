@@ -18,12 +18,14 @@ public class AvoiderGameWorldIntro extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(900, 615, 1); 
-        play();
+        sound = new GreenfootSound("PokemonIntro.mp3");
+        sound.setVolume(50);
     }
 
     public void act()
     {
-        if(Greenfoot.mouseClicked(this)){
+       play();
+       if(Greenfoot.mouseClicked(this)){
             stop();
             AvoiderGameWorld world = new AvoiderGameWorld();
             Greenfoot.setWorld(world);
@@ -31,11 +33,8 @@ public class AvoiderGameWorldIntro extends World
     }
 
     public void play(){
-        sound = new GreenfootSound("PokemonIntro.mp3");
-        sound.setVolume(50);
-        sound.play();
-        sound.playLoop();
-    } 
+         sound.play();
+        } 
 
     public void stop(){
         sound.stop();
