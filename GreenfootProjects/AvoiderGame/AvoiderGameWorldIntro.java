@@ -17,7 +17,7 @@ public class AvoiderGameWorldIntro extends World
     public AvoiderGameWorldIntro()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(900, 614, 1); 
+        super(900, 615, 1); 
         play();
     }
 
