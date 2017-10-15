@@ -24,6 +24,7 @@ public class AvoiderWorldGameOverScreen extends World
     public void act()
     {
         if(Greenfoot.mouseClicked(this)){
+            stop();
             AvoiderGameWorld world = new AvoiderGameWorld();
             Greenfoot.setWorld(world);
                     }

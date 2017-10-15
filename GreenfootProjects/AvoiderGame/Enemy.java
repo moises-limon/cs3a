@@ -13,12 +13,12 @@ public class Enemy extends Actor
      * Act - do whatever the Enemy wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    GreenfootSound sound;
+    private int speed;
     
     public void act() 
     {
         // Add your action code here.
-        setLocation(getX(), getY() + 3);
+        setLocation(getX(), getY() + speed);
         checkRemove();
     }    
      
@@ -28,5 +28,8 @@ public class Enemy extends Actor
             w.removeObject(this);
         }
     }
-    
-}
+     
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+    }

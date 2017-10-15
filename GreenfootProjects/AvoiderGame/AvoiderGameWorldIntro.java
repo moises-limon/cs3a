@@ -11,11 +11,7 @@ public class AvoiderGameWorldIntro extends World
     private GreenfootSound sound;
     private boolean playedIntroYet;
     
-    /**
-     * Constructor for objects of class AvoiderGameWorldIntro.
-     * 
-     */
-    public AvoiderGameWorldIntro()
+        public AvoiderGameWorldIntro()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(900, 615, 1); 
